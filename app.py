@@ -29,7 +29,7 @@ if casilla_histograma:
     st.plotly_chart(fig, use_container_width=True)
 
 # Creamos el boton de verificacion grafico de dispersion
-if casilla_histograma:
+if casilla_dispersion:
     st.write("Construccion de un histograma para la columna odometro con boton de verificacion")
-    fig = px.scatter(df_autos, x="odometer")
+    fig = px.scatter(df_autos, x="odometer", y="price")
     st.plotly_chart(fig, use_container_width=True)
